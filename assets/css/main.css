@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*
+  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Rubik', sans-serif;
+*/
+*, :after, :before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gray: #F5F5F5;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+header .header {
+  height: 100px;
+  background: #18302B;
+  display: flex;
+  padding: 30px 70px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+header .header h1 {
+  color: #DFCAA4;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;
+}
+header .header__navbar a {
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 30px;
+}
+header .header__navbar #active {
+  padding: 8px 6px;
+  font-weight: 700;
+  border-bottom: 2px solid #AF8958;
+}
+header .hero-banner {
+  background-image: url("../images/eoliennes.png");
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 90px;
+}
+header .hero-banner h2 {
+  color: #fff;
+  width: 400px;
+  font-size: 4em;
+  font-family: "Playfair Display", serif;
+}
+header .hero-banner__button {
+  background: #fff;
+  border: none;
+  color: #333;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  padding: 16px;
+  width: fit-content;
+}
+
+.container {
+  margin: 4% 10%;
+}
+
+.article {
+  font-family: Rubik, sans-serif;
+}
+.article__title {
+  color: #1E1E1E;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+.article__content {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.article__content img {
+  width: 400px;
+  height: 400px;
+}
+.article__content__paragraph h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.article__content__paragraph p {
+  font-family: Quicksand, sans-serif;
+  font-size: 20px;
+}
+.article__content__description {
+  font-size: 0.8em;
+}
+.article__content-inverse {
+  flex-direction: row-reverse;
+}
+.article-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+}
+.article-full {
+  padding: 4% 10%;
+  text-align: center;
+}
+
+.section {
+  padding: 4% 10%;
+  background: #18302B;
+  color: #fff;
+  text-align: center;
+}
+.section__title {
+  font-family: Rubik, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.section__content {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.section__content__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section__content__icon img {
+  background-color: white;
+  color: #1E1E1E;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.section__content__icon__text {
+  padding-top: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.cards .card {
+  font-family: "Quicksand", sans-serif;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.cards .card__header {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.cards .card__header__name {
+  font-size: 15px;
+  font-weight: bold;
+}
+.cards .card__header__role {
+  font-size: 12px;
+  color: #777;
+}
+.cards .card__body p {
+  font-size: 14px;
+}
+.cards .card__footer {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
