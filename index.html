@@ -13,21 +13,52 @@
 
 <body>
     <header>
-        <div class="header">
+        <div class="header" id="header">
             <h1>Your logo</h1>
-            <nav class="header__navbar">
-                <a href="index.html" id="active">Home</a>
-                <a href="#">Services</a>
-                <a href="#">Industries</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Company</a>
-            </nav>
+            <ul class="header__navbar">
+                <li><a href="index.html" id="active">Home</a></li>
+                <li class="header__navbar__deroulant">
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Energy</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Information Technology</a></li>
+                        <li><a href="#">Port Services</a></li>
+                    </ul>
+                </li>
+                <li class="header__navbar__deroulant">
+                    <a href="#">Industries</a>
+                    <ul>
+                        <li><a href="#">Energy</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Information Technology</a></li>
+                        <li><a href="#">Port Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Portfolio</a></li>
+                <li class="header__navbar__deroulant">
+                    <a href="#">Company</a>
+                    <ul>
+                        <li><a href="#">Energy</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Information Technology</a></li>
+                        <li><a href="#">Port Services</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div class="hero-banner">
             <h2>We Produce the Legacy of Excellence</h2>
             <button class="hero-banner__button">Contact us</button>
         </div>
     </header>
+
+    <a href="#header">
+        <img src="assets/images/cursor.svg" alt="Curseur" style="width: 100%;height:20px;text-align: center">
+    </a>
 
     <div class="container">
         <article class="article">
@@ -129,6 +160,110 @@
             </div>
         </div>
     </article>
+    <div class="container">
+        <article class="article">
+            <span class="article__title">
+                Blog
+            </span>
+            <div class="news">
+                <div class="news__card">
+                    <img class="news__card__image" src="assets/images/news1.png" alt="Image de l'article 1">
+                    <span class="news__card__date">18 Sen 2022</span>
+                    <h3>Amet minim mollit non deserunt ullamco est sit aliqua</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <div class="news__card">
+                    <img class="news__card__image" src="assets/images/news2.png" alt="Image de l'article 2">
+                    <span class="news__card__date">18 Sen 2022</span>
+                    <h3>Amet minim mollit non deserunt ullamco est sit aliqua</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <div class="news__card">
+                    <img class="news__card__image" src="assets/images/news3.png" alt="Image de l'article 3">
+                    <span class="news__card__date">18 Sen 2022</span>
+                    <h3>Amet minim mollit non deserunt ullamco est sit aliqua</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+            <div class="flex-center">
+                <button class="button">View all</button>
+            </div>
+        </article>
+    </div>
+    <section class="section__contact">
+        <span>Contact us</span>
+        <a href="#contact"><button>Contact us</button></a>
+    </section>
+    <div class="container">
+        <article class="article" id="contact">
+            <span class="article__title">
+                Contact us
+            </span>
+            <div class="contact">
+                <div class="contact__infos">
+                    <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
+                    <span>alma.lawson@example.com</span>
+                    <span>(702) 555-0122</span>
+                </div>
+                <div class="contact__form">
+                    <form action="#" method="post">
+                        <label>
+                            <input type="text" placeholder="Full name">
+                        </label>
+                        <label>
+                            <input type="tel" placeholder="Phone number">
+                        </label>
+                        <label>
+                            <input type="email" placeholder="Email address">
+                        </label>
+                        <label>
+                            <textarea placeholder="Enter text"></textarea>
+                        </label>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <h1>Your logo</h1>
+            <div class="footer__links">
+                <a href="#"><strong>Industries</strong></a>
+                <a href="#">Energy</a>
+                <a href="#">Construction</a>
+                <a href="#">Consulting</a>
+                <a href="#">Information Technology</a>
+                <a href="#">Port Services</a>
+            </div>
+            <div class="footer__links">
+                <a href="#"><strong>Company</strong></a>
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="#">News</a>
+                <a href="#">Contact us</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer__social">
+                <div class="footer__social__newsletter">
+                    <form action="#" method="post">
+                        <label>
+                            <input type="email" value="Enter Email Address">
+                        </label>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="footer__social__icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <span>© 2011 - 2022 Company name | All rights reserved</span>
+    </footer>
 </body>
 
 </html>

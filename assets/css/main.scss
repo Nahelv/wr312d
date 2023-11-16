@@ -24,6 +24,14 @@ body {
   background-color: var(--gray);
 }
 
+h1 {
+  color: #DFCAA4;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;
+}
+
 header {
   .header {
     height: 100px;
@@ -34,24 +42,52 @@ header {
     align-items: center;
     font-family: 'Quicksand', sans-serif;
 
-    h1 {
-      color: #DFCAA4;
-      font-size: 28px;
-      font-weight: 300;
-      letter-spacing: 3.36px;
-      text-transform: uppercase;
-    }
-
     &__navbar {
-      a {
-        text-transform: none;
+      display: flex;
+      gap: 20px;
+
+      &__deroulant::after {
+        color: #f1f1f1;
+        position: relative;
+        top: 0;
+        content: " ⌵";
+      }
+
+      li, a {
+        padding: 8px 2px;
         text-decoration: none;
+        list-style-type: none;
         color: #fff;
-        margin-right: 30px;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          border-bottom: 2px solid #AF8958;
+          transition: all 0.3s ease;
+        }
+      }
+
+      li > ul {
+        display: none;
+      }
+
+      li:hover > ul {
+        display: block;
+        position: absolute;
+        background: #18302B;
+        border-radius: 0 0 8px 8px;
+        z-index: 1;
+
+        li, a {
+          padding: 10px;
+        }
+
+        li:hover, a:hover {
+          border-bottom: 2px solid transparent;
+          background: #33504A;
+        }
       }
 
       #active {
-        padding: 8px 6px;
         font-weight: 700;
         border-bottom: 2px solid #AF8958;
       }
@@ -62,7 +98,7 @@ header {
     background-image: url('../images/eoliennes.png');
     background-position: center;
     background-size: cover;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 130px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,7 +238,7 @@ header {
     background: white;
     padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px 0;
 
     &__header {
       margin: 10px 0;
@@ -228,6 +264,224 @@ header {
 
     &__footer {
       margin-top: 20px;
+    }
+  }
+}
+
+.news {
+  display: flex;
+  gap: 30px;
+  font-family: Quicksand, sans-serif;
+
+  &__card {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 320px;
+
+    &__image {
+      width: 100%;
+    }
+
+    &__date {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.button {
+  padding: 7px 30px;
+  border-radius: 26px;
+  border: 1px solid #B6B6B6;
+  background: none;
+
+  &:hover {
+    background: #B6B6B6;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.section__contact {
+  padding: 4% 10%;
+  background: rgba(51, 80, 74, 0.08);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  span {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  button {
+    padding: 14px 35px;
+    background: #33504A;
+    color: #FFF;
+    border: 1px solid transparent;
+    outline: none;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+      background: none;
+      color: #33504A;
+      border: 1px solid #33504A;
+    }
+  }
+}
+
+
+footer {
+  background: #18302B;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  padding-bottom: 20px;
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 100px;
+    padding: 50px;
+
+    h1 {
+      width: 200px !important;
+    }
+
+    &__links {
+      width: 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+
+    &__social {
+      grid-column: 5/6;
+
+      &__icons {
+        i {
+          background: #b08c51;
+          color: #18302B;
+          padding: 10px;
+          border-radius: 20px;
+        }
+      }
+
+      form {
+        display: flex;
+        margin-bottom: 30px;
+
+        input[type="email"] {
+          padding: 10px 20px;
+          color: white;
+          border-radius: 8px 0 0 8px;
+          border: none;
+          outline: none;
+          background: rgba(77, 89, 87, 0.54);
+          font-family: Quicksand, sans-serif;
+        }
+
+        button[type="submit"] {
+          padding: 10px 20px;
+          color: white;
+          border-radius: 0 8px 8px 0;
+          border: none;
+          outline: none;
+          background: #b08c51;
+          font-family: Quicksand, sans-serif;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  span {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+  }
+}
+
+#contact {
+  padding: 50px 0;
+
+  .contact {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+
+    .contact__infos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact__form form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input {
+        width: 100%;
+        padding: 10px 20px;
+        border: 1px solid #B6B6B6;
+        outline: none;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 10px 20px;
+        background: #F4F4F4;
+        border: none;
+        outline: none;
+      }
+
+      button[type="submit"] {
+        padding: 15px 40px;
+        background: #777777;
+        color: #FFF;
+        border: 1px solid transparent;
+        outline: none;
+        font-weight: 600;
+        width: fit-content;
+
+        &:hover {
+          cursor: pointer;
+          background: none;
+          color: #777777;
+          border: 1px solid #777777;
+        }
+      }
     }
   }
 }
